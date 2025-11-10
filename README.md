@@ -1,0 +1,2 @@
+# duckdb_analytics_lilit_ajoyan_mlops25
+Learning Duckdb
