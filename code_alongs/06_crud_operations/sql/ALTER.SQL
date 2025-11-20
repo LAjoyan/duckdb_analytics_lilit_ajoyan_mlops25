@@ -1,0 +1,1 @@
+ALTER TABLE database_shema.duckdb ADD COLUMN learnt BOOLEAN DEFAULT FALSE;
