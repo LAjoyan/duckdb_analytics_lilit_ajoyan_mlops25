@@ -1,0 +1,2 @@
+ALTER TABLE clean
+DROP COLUMN week;
