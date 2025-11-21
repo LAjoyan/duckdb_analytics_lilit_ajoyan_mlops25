@@ -65,4 +65,9 @@ ORDER BY
     commune;
 
 --j) How many percentage of homes cost more than 10 million?
+FROM home 
+WHERE final_price > 10_000_000
+ORDER BY final_price DESC;
 --k) Feel free to explore anything else you find interesting in this dataset.
+FROM home 
+WHERE commune LIKE 'Ursvik%';
