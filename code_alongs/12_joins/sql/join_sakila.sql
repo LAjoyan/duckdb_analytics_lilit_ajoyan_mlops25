@@ -46,3 +46,17 @@ SELECT
 FROM
     film f
     INNER JOIN category c ON category_id;
+
+    SELECT 
+    s.staff_id,
+    s.first_name,
+    s.last_name,
+    s.address_id AS staff_address_id,
+    a.address_id AS address_address_id,
+    a.address,
+    c.city,
+    cty.country
+    FROM staff s
+    LEFT JOIN address a ON s.address_id = a.address_id
+    LEFT JOIN city c ON a.city_id = c.city_id
+    LEFT JOIN country cty  ON cty.country_id = c.country_id;
