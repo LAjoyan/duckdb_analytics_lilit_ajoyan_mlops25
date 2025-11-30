@@ -2,6 +2,31 @@ version = 1
 revision = 3
 requires-python = ">=3.14"
 
+[manifest]
+members = [
+    "18-pandas-duckdb",
+    "duckdb-analytics-lilit-ajoyan-mlops25",
+]
+
+[[package]]
+name = "18-pandas-duckdb"
+version = "0.1.0"
+source = { virtual = "code_alongs/18_pandas_duckdb" }
+dependencies = [
+    { name = "duckdb" },
+    { name = "ipykernel" },
+    { name = "matplotlib" },
+    { name = "pandas" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "duckdb", specifier = ">=1.4.2" },
+    { name = "ipykernel", specifier = ">=7.1.0" },
+    { name = "matplotlib", specifier = ">=3.10.7" },
+    { name = "pandas", specifier = ">=2.3.3" },
+]
+
 [[package]]
 name = "appnope"
 version = "0.1.4"
