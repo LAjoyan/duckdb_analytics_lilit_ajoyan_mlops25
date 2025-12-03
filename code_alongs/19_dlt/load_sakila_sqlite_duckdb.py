@@ -1,0 +1,23 @@
+# load from sqlite sakila into sakila.duckdb
+
+import dlt
+from dlt.sources.sql_database import sql_database
+from pathlib import Path
+
+DATA_PATH = Path(__file__).parent / "data"
+# DATA_PATH = Path(__file__).parent[1] / "data"
+
+# source path
+SQLITE_PATH = DATA_PATH / "sqlite-sakila.db"
+# target path
+DUCKDB_PATH = DATA_PATH / "sakila.db"
+
+source = sql_database(f"sqlite:///{SQLITE_PATH}", schema="main")
+
+pipeline = dlt.pipeline(
+    pipeline_name="sakila_sqlite_duckdb",
+    destination=dlt.destinations.duckdb(str(DUCKDB_PATH)),
+    dataset_name="staging",
+)
+
+load_info = pipeline.run(source, write_disposition="replace")
