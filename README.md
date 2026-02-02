@@ -2,7 +2,7 @@
 
 ## 🚀 Related Project
 Looking for a production-ready implementation with a more detailed README?  
-👉 [sakila_lab_lilit_ajoyan](https://github.com/Lilit900/sakila_lab_lilit_ajoyan)
+👉 [sakila_lab_lilit_ajoyan](https://github.com/LAjoyan/sakila_lab_lilit_ajoyan)
 
 ---
 
